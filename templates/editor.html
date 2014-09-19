@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<nav>
+	{% for b in breadcrum %}
+	<a href="{{ b[1] }}">{{ b[0] }}</a>
+	{% endfor %}
+</nav>
+<div class=editor>
+	<h2>{{ path }}</h2>
+	<form method=post action="{{ request.path }}">
+		<textarea name=content>{{ content | safe }}</textarea>
+		<input type=text placeholder="Enter commit message…" name=message />
+		<input type=submit value=Save />
+	</form>
+</div>
+{% endblock %}

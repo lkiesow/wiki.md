@@ -1,0 +1,46 @@
+body {
+	font-family: sans-serif;
+	background-color: #444;
+}
+
+.editor, .content, nav {
+	display: block;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.editor, .content {
+	background-color: #fff;
+	padding: 15px;
+}
+
+.editor textarea {
+	width: 100%;
+	min-height: 100px;
+	height: 400px;
+	font-family: monospace;
+}
+
+code {
+	font-family: monospace;
+}
+
+nav {
+	padding: 15px;
+}
+
+nav a {
+	color: black;
+	padding: 5px;
+	border-radius: 3px;
+	background-color: #ddd;
+	text-decoration: None;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: #888;
+}

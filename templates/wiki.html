@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<a style="float: right;" href="?edit">edit</a>
+<nav>
+	{% for b in breadcrum %}
+	<a href="{{ b[1] }}">{{ b[0] }}</a>
+	{% endfor %}
+</nav>
+<div class=content>
+	{{ content | safe }}
+</div>
+{% endblock %}
