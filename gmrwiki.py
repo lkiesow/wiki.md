@@ -9,7 +9,7 @@ sys.setdefaultencoding('utf8')
 import os, errno
 from markdown2 import markdown
 from subprocess import Popen
-from flask import Flask, render_template, request, Response
+from flask import Flask, render_template, request, Response, redirect
 app = Flask(__name__)
 
 DATADIR = '%s/data' % os.path.dirname(os.path.realpath(__file__))
@@ -79,11 +79,11 @@ def save(path=''):
 	Popen(['git', 'commit', '-m', message], cwd=DATADIR ).communicate()
 
 	# Return page
-	return home(request.path)
+	return redirect(request.path)
 
 
 init()
 
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(host='0.0.0.0', debug=True)
