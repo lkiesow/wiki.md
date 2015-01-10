@@ -5,13 +5,14 @@ body {
 
 .editor, .content, nav {
 	display: block;
-	max-width: 1000px;
+	max-width: 900px;
 	margin: 0 auto;
 }
 
 .editor, .content {
-	background-color: #fff;
-	padding: 15px;
+	background-color: #222;
+	padding: 50px;
+	color: #bbb;
 }
 
 .editor textarea {
@@ -19,6 +20,15 @@ body {
 	min-height: 100px;
 	height: 400px;
 	font-family: monospace;
+	background-color: #222;
+	color: #bbb;
+}
+
+.editor input {
+	background-color: #222;
+	color: #bbb;
+	border: 1px solid #bbb;
+	padding: 2px;
 }
 
 code {
@@ -30,17 +40,38 @@ nav {
 }
 
 nav a {
-	color: black;
-	padding: 5px;
+	color: #aaa;
+	padding: 5px 10px;
 	border-radius: 3px;
-	background-color: #ddd;
+	background-color: #222;
 	text-decoration: None;
 }
 
 a {
-	color: black;
+	color: #ddd;
 }
 
 a:hover {
 	color: #888;
+}
+
+header.actionbar {
+	float: right;
+	font-size: smaller;
+}
+
+header.actionbar input, header.actionbar a {
+	width: 75px;
+	border: none;
+	background-color: #222;
+	color: #aaa;
+	padding: 2px;
+	margin: 0px;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
+
+header.actionbar input[type=submit] {
+	width: 20px;
 }

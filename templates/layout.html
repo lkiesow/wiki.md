@@ -6,6 +6,21 @@
 </head>
 <body>
 
+<header class=actionbar>
+	{% if 'edit' in nav %}
+	<a href="?edit">edit</a>
+	{% endif %}
+	{% if 'logout' in nav %}
+	<a href="{{ url_for('logout') }}">logout</a>
+	{% endif %}
+	{% if 'login' in nav %}
+	<form action="{{ url_for('login') }}" method=post>
+		<input type=text name=user placeholder=username />
+		<input type=password name=password placeholder=password />
+		<input type=submit value="»" />
+	</form>
+	{% endif %}
+</header>
 <div class=page>
 	{% block body %}{% endblock %}
 </div>
