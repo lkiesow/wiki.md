@@ -7,7 +7,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 import os, errno
-from markdown2 import markdown
+from markdown import markdown
 from subprocess import Popen
 from hashlib import sha512
 from flask import Flask, render_template, request, Response, redirect, session, url_for
