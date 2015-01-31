@@ -15,6 +15,12 @@ body {
 	color: #bbb;
 }
 
+.content pre {
+	padding: 10px;
+	padding-left: 40px;
+	background-color: #161616;
+}
+
 .editor textarea {
 	width: 100%;
 	min-height: 100px;
